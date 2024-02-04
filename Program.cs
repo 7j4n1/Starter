@@ -141,10 +141,42 @@ do
         menuSelection = readResult.ToLower();
     }
 
-    Console.WriteLine($"You selected menu option {menuSelection}.");
-    Console.WriteLine("Press the Enter key to continue");
+    switch (menuSelection)
+    {
+        case "1":
+            // List all of our current pet information
+            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
 
-    // pause code execution
-    readResult = Console.ReadLine();
+        case "2":
+            // Add a new animal friend to the ourAnimals array
+            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        case "3":
+            Console.WriteLine("Challenge Project - please check back soon to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+        
+        default:
+            break;
+    }
+
+
 } while (menuSelection != "exit");
 

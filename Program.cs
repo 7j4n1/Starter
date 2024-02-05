@@ -19,51 +19,7 @@ string[,] ourAnimals = new string[maxPets, 6];
 // create some initial ourAnimals array entries
 for (int i = 0; i < maxPets; i++)
 {
-    // if (i == 0)
-    // {
-    //     animalSpecies = "dog";
-    //     animalID = "d1";
-    //     animalAge = "2";
-    //     animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
-    //     animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
-    //     animalNickname = "lola";
-    // }
-    // else if (i == 1)
-    // {
-    //     animalSpecies = "dog";
-    //     animalID = "d2";
-    //     animalAge = "9";
-    //     animalPhysicalDescription = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
-    //     animalPersonalityDescription = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
-    //     animalNickname = "loki";
-    // }
-    // else if (i == 2)
-    // {
-    //     animalSpecies = "cat";
-    //     animalID = "c3";
-    //     animalAge = "1";
-    //     animalPhysicalDescription = "small white female weighing about 8 pounds. litter box trained.";
-    //     animalPersonalityDescription = "friendly";
-    //     animalNickname = "Puss";
-    // }
-    // else if (i == 3)
-    // {
-    //     animalSpecies = "cat";
-    //     animalID = "c4";
-    //     animalAge = "?";
-    //     animalPhysicalDescription = "";
-    //     animalPersonalityDescription = "";
-    //     animalNickname = "";
-    // }
-    // else
-    // {
-    //     animalSpecies = "";
-    //     animalID = "";
-    //     animalAge = "";
-    //     animalPhysicalDescription = "";
-    //     animalPersonalityDescription = "";
-    //     animalNickname = "";
-    // }
+
     switch (i)
     {
         case 0:
@@ -145,14 +101,25 @@ do
     {
         case "1":
             // List all of our current pet information
-            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    Console.WriteLine();
+                    for (int j = 0; j < 6; j++)
+                    {
+                        Console.WriteLine(ourAnimals[i, j]);
+                    }
+                }
+            }
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
 
         case "2":
             // Add a new animal friend to the ourAnimals array
-            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            string anotherPet = "y";
+            int petCount = 0;
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
